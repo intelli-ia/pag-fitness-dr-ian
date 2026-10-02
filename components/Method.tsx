@@ -16,7 +16,7 @@ const pillars = [
   {
     title: "Sem afastamento prolongado",
     body: "Menos risco de ficar longe da rotina de musculação.",
-    image: "/images/card-treino.jpg",
+    image: "/images/card-treino.webp",
     pos: "50% 50%",
   },
 ];

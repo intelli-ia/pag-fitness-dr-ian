@@ -1,8 +1,8 @@
 import { Cta, CardImage, NumberRule, Reveal, SpotCard } from "@/components/shared";
 
 const signals = [
-  { title: "Agachamento", body: "Dificuldade para progredir de carga.", image: "/images/card-agachamento.jpg", pos: "50% 40%" },
-  { title: "Levantamento terra", body: "Rendimento abaixo do que já foi.", image: "/images/card-terra.jpg", pos: "50% 35%" },
+  { title: "Agachamento", body: "Dificuldade para progredir de carga.", image: "/images/card-agachamento.webp", pos: "50% 40%" },
+  { title: "Levantamento terra", body: "Rendimento abaixo do que já foi.", image: "/images/card-terra.webp", pos: "50% 35%" },
   { title: "Hérnias", body: "Umbilicais e inguinais favorecidas pelo esforço no limite.", image: "/images/card-hernia.webp", pos: "50% 45%" },
 ];
 

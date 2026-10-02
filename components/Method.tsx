@@ -25,7 +25,7 @@ export default function Method() {
   return (
     <section className="section-edge bg-primary py-12 lg:py-24 relative overflow-hidden">
       <div className="pointer-events-none absolute -left-24 top-10 h-96 w-96 rounded-full bg-tertiary/15 blur-3xl animate-drift-a" />
-      <div className="pointer-events-none absolute -right-24 bottom-10 h-[28rem] w-[28rem] rounded-full bg-[#4b34d6]/25 blur-3xl animate-drift-b" />
+      <div className="pointer-events-none absolute -right-24 bottom-10 h-[28rem] w-[28rem] rounded-full bg-white/10 blur-3xl animate-drift-b" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
         <Reveal className="text-center">
           <h2 className="text-2xl lg:text-4xl font-extrabold tracking-tight text-secondary">

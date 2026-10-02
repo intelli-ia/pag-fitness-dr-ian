@@ -31,7 +31,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="section-edge bg-primary py-12 lg:py-24 border-t border-secondary/10 bg-[radial-gradient(ellipse_at_top_right,rgb(75_52_214/0.25),transparent_60%)]">
+    <section className="section-edge bg-primary py-12 lg:py-24 border-t border-secondary/10 bg-[radial-gradient(ellipse_at_top_right,rgb(255_255_242/0.08),transparent_60%),var(--gradient-primary)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Esquerda */}

@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #231666;
+  --color-secondary: #FFFFF2;
+  --color-tertiary: #FE9601;
+}
+
+:root {
+  --shine: 0 0% 100%; /* branco — cor do sweep no ShinyButton */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+  background-color: #231666;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-tertiary);
+  color: var(--color-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Texturas por seção (cada dobra tem a sua) ───────────── */
+.bg-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgb(35 22 102 / 0.045) 0 2px,
+    transparent 2px 22px
+  );
+}
+
+@keyframes drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, 40px) scale(1.15); }
+}
+
+@keyframes drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-70px, -30px) scale(1.2); }
+}
+
+.animate-drift-a { animation: drift-a 14s ease-in-out infinite; }
+.animate-drift-b { animation: drift-b 18s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-drift-a,
+  .animate-drift-b {
+    animation: none;
+  }
+}
+
+/* ── Acabamento premium ──────────────────────────────────── */
+/* Destaque dourado-alaranjado nos títulos */
+.text-gold {
+  background-image: linear-gradient(100deg, #fe9601 20%, #ffc766 55%, #fe9601 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Fio de luz no topo das seções */
+.section-edge {
+  position: relative;
+}
+.section-edge::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  z-index: 5;
+  background: linear-gradient(90deg, transparent, rgb(254 150 1 / 0.6), transparent);
+}
+
+/* Granulado fino sobre a página inteira */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
